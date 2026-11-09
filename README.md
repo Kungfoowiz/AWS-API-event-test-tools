@@ -6,7 +6,7 @@
 |**Test environment**|Testcontainers for .NET|Starts Kafka, Schema Registry and databases per test run|Open source|Good. Needs Docker, so use CodeBuild privileged mode or Docker-capable runners. |
 ||Confluent.Kafka client|Produce and consume in tests|Open source|Very good, including against Amazon Managed Kafka Services (MSK). |
 |**Load and soak**|NBomber|C# load, soak and Kafka load tests|Commercial for organisations / [Per company.](https://nbomber.com/pricing) |Good. Runs on ECS, EC2 or CodeBuild. |
-|**Resilience**|Toxiproxy|Injects network faults (including for Kafka)|Open source|Good. Runs as a container or ECS sidecar. |
+|**Resilience**|Toxiproxy|Injects network faults including Kafka|Open source|Good. Runs as a container or ECS sidecar. |
 ||Polly (with chaos strategies)|In-app resilience policies and in-process faults|Open source|Very good. Library only, no AWS dependency. |
 ||Chaos Mesh|Fault injection on Kubernetes|Open source|Good on EKS. |
 ||AWS Fault Injection Service (FIS)|Faults on AWS resources|Pay per use|Native. / [What is FIS?](https://docs.aws.amazon.com/fis/latest/userguide/what-is.html) / [Event/data layer chaos testing](https://www.conduktor.io/glossary/chaos-engineering-for-kafka) / [FIS lambda function testing](https://aws.amazon.com/blogs/mt/introducing-aws-fault-injection-service-actions-to-inject-chaos-in-lambda-functions) / [FIS partial failure testing](https://aws.amazon.com/blogs/mt/simulating-partial-failures-with-aws-fault-injection-service)  |
